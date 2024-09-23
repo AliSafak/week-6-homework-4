@@ -1,0 +1,464 @@
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+    font-family: "Inter";
+}
+
+/*
+Typographic tweaks!
+3. Add accessible line-height
+4. Improve text rendering
+*/
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+.header-nav {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* !burada css reset ozellikleri bulunmakta */
+
+/* !buradan itibaren sitenin css ozellikleri basliyor */
+
+.header {
+    margin-top: 16px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 16px;
+}
+
+.header-down {
+    text-align: center;
+    margin-top: 24px;
+}
+.header-down h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color:#272D37
+}
+
+.header-down p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.10000000149011612px;
+    color:#5F6D7E ;
+    margin-inline: 16px;
+}
+
+.header-contact {
+    padding-inline: 16px;
+}
+
+.header-contact div:first-child a {
+    display: inline-block;
+    color: white;
+    padding:12px 128px ;
+    background-color: #437ef7;
+    border-radius: 6px;
+    margin-top: 24px;
+}
+
+.header-contact div:nth-child(2) a {
+    display: inline-block;
+    color: black;
+    padding:12px 128px ;
+    background-color: #437ef7;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #DAE0E6;
+    margin-block: 16px 24px;
+}
+
+.header-down img {
+    margin-inline: auto;
+}
+
+/* bu kisimda headerla ilgili kisimlar tamamen bitti. */
+
+/* burada kanallarin yorumlari bulunmakta */
+.channels-review-part {
+    margin-inline: 16px;
+}
+
+.channels-review-text {
+    margin-block: 32px;
+}
+/* bu kisimda gap kullanarak farklı ekranlarda otomatik olarak sekillenmesini ayarliyorum. */
+.channels-reviews {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+
+.channels-review {
+    padding: 16px;
+    border: 1px solid #eaebf0 ;
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.channels-review h3 {
+   margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.02em;   
+}
+
+.channels-review p {
+    line-height: 24px;
+    letter-spacing: -0.10000000149011612px;
+    color: #5F6D7E;
+}
+
+.channels-review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.channels-review-header div:nth-child(2) a {
+    padding:12px 18px ;
+    display: inline-block;
+    border: 1px solid #dae0e6;
+    border-radius: 6px;
+}
+
+/* burada 6 tane eleman iceren satır bitti */
+
+
+/* buradan itibaren ise features kismi bulunmakta. */
+
+.product-features-text {
+    text-align: center;
+}
+
+.product-features div >img {
+    margin-inline: auto;
+    margin-block: 32px;
+}
+
+.product-features h1 {
+    padding-inline: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #272D37;
+}
+
+.product-features p {
+    margin-inline: 16px;
+    color: #5F6D7E;
+    line-height: 24px;
+    letter-spacing: -0.10000000149011612px;
+}
+
+.product-features h3 {
+    margin-inline: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.10000000149011612px;
+    color: #437EF7;
+}
+
+.product-features a {
+    margin-block: 32px;
+    margin-left: 16px;
+    display: inline-flex;
+    background-color: #437ef7;
+    padding:12px 18px ;
+    color: white;
+    border-radius: 6px;
+
+}
+
+.product-features a img {
+    margin-left: 6px;
+}
+
+.product-features-blue {
+    background-color:#2b63d9 ;
+}
+
+.product-features-blue div >img {
+    padding-block: 32px;
+}
+
+.product-features-blue h1 {
+    color: white;
+}
+.product-features-blue h3 {
+    color: white;
+}
+
+.product-features-blue p {
+    color: #B1CCFB;
+}
+
+/* burada latest post kismi basliyor */
+
+.latest-post-items {
+    margin-top: 32px;
+}
+
+.latest-posts-grid-part {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.latest-posts {
+    margin-inline: 16px;
+}
+
+.latest-post-parts {
+    border: 1px solid #eaebf0;
+    border-radius: 10px;
+}
+
+.latest-posts h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #272D37;
+    text-align: center;
+}
+
+.latest-posts p {
+    line-height: 24px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: center;
+    color: #5F6D7E;
+    margin-block: 12px 24px;
+}
+
+.latest-post-info   a {
+    color:#437EF7 ;
+    background-color: #f5faff;
+    border-radius:5px ;
+}
+
+.latest-post-info {
+    display: flex;
+    gap:16px ;
+}
+
+.latest-post-parts-text {
+    padding-inline: 16px;
+}
+
+.latest-post-parts-text  > a {
+    display: flex;
+    color: #437ef7;
+    gap: 6px;
+    margin-bottom: 24px;
+}
+
+/* burada customer review kismi baslamis bulunmaktadir. */
+.customer-reviews {
+    padding: 16px 32px;
+    text-align: center;
+
+}
+
+.customer-reviews h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color:#272D37 ;
+
+}
+.customer-reviews p {
+    line-height: 24px;
+    letter-spacing: -0.10000000149011612px;
+    color:#5F6D7E ;
+    padding-block: 12px 40px;
+}
+.customer-reviews h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.10000000149011612px;
+     color:#272D37 ;
+}
+
+.customer-review {
+    text-align: center;
+    padding-block: 30px;
+}
+
+.customer-review img {
+    margin-inline: auto;
+}
+
+.customer-review:first-child , .customer-review:nth-child(2) {
+    border-bottom: 1px solid #EAEBF0;
+}
+
+/* burada footer bulunuyor */
+
+.footer {
+    margin-inline: 16px;
+    background-color: #f8f9fb;
+    border-radius: 10px;
+    padding-block: 16px;
+}
+
+
+.footer-top {
+    padding: 16px;   
+}
+
+.footer h3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.10000000149011612px;
+    color: #437EF7;
+    padding-bottom:  8px;
+   
+}
+
+.footer h1 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+}
+
+.footer >input {
+    display: inline-block;
+    border: 1px solid #dae0e6;
+    font-family: "Inter";
+    font-size: 15px;
+    line-height: 22px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    margin-inline: 16px;
+}
+/* burada a ya istedigim margin ozelligini veremedim. */
+.footer a {
+    color: white;
+    text-align: center;
+    display: block;
+    padding:12px 127px ;
+    background-color: #437EF7;
+    border-radius: 6px;
+    padding-bottom: 16px;
+}
+/*  burada da sitenin en alt kismi bulunmakta.ç */
+
+.footer-down {
+    margin: 32px 16px;
+}
+
+.social-media-icons {
+    margin-inline: 27.5px;
+    margin-block: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* burada da sitenin en sonunda bulunan linkler bulunmakta. */
+
+.footer-grid-parts {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:  24px 64px;
+}
+
+
+.footer-grid-part li:first-child {
+    color: #272D37;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.10000000149011612px;
+    margin-bottom: 16px;
+}
+
+li {
+    color: #5F6D7E;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.10000000149011612px;
+    margin-bottom: 12px;
+}
+
+.last-img  {
+    margin-inline:auto;
+}
+
+.last-text {
+    color:#5F6D7E ;
+    //styleName: Text L/Regular;
+    line-height: 24px;
+    letter-spacing: -0.10000000149011612px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+@media (width>375px) {
+    
+}
